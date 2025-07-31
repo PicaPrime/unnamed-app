@@ -18,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [\App\Http\Controllers\AccountController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -64,5 +62,10 @@ Route::get('/investment', [\App\Http\Controllers\AccountController::class, 'inve
 Route::get('/security', [\App\Http\Controllers\AccountController::class, 'security'])->name('security');
 Route::get('/transfer', [\App\Http\Controllers\AccountController::class, 'transfer'])->name('transfer');
 Route::get('/leaderboard', [\App\Http\Controllers\AccountController::class, 'leaderboard'])->name('leaderboard');
+
+
+route::get('/play-loto', function () {
+    return view('game.index');
+})->name('game');
 
 require __DIR__ . '/auth.php';

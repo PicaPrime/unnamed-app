@@ -2,9 +2,9 @@
   <div class="nav-container">
     <div class="nav-brand">
       <div class="brand-logo">
-        <span class="bitcoin-symbol">₿</span>
+        <span class="bitcoin-symbol">L₿</span>
       </div>
-      <span class="brand-text">HustleBTC</span>
+      <span class="brand-text">LotoBTC</span>
     </div>
     <div class="nav-menu">
       <a href="#home" class="nav-link">Home</a>
@@ -12,6 +12,7 @@
       <a href="/stats" class="nav-link">Stats</a>
       <a href="/leaderboard" class="nav-link">Leaderboard</a>
       <a href="/faq" class="nav-link">Help</a>
+      <a href="/play-loto" class="nav-link">Game</a>
     </div>
     <div class="nav-actions">
       <a href="/login" class="btn-secondary">Login</a>
